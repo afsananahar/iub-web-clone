@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IUB Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #2b208b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .main-title {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .box {
+      flex: 1 1 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .box-header {
+      padding: 20px;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .blue { background-color: #2b208b; }
+    .orange { background-color: #f7901d; }
+    .purple { background-color: #6c278d; }
+    .green { background-color: #2e7d32; }
+    .teal { background-color: #00897b; }
+    .indigo { background-color: #3949ab; }
+    .red { background-color: #c62828; }
+    .pink { background-color: #ad1457; }
+    .deep-orange { background-color: #d84315; }
+
+    .box-content {
+      background-color: white;
+      padding: 20px;
+    }
+
+    .box-content a {
+      display: block;
+      padding: 10px 0;
+      color: #2b208b;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    .box-content a:last-child {
+      border-bottom: none;
+    }
+
+    .hours-block {
+      background-color: #fddde0;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .notice {
+      font-size: 14px;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .facility-section {
+      margin-bottom: 30px;
+    }
+
+    .facility-section h2 {
+      color: #2b208b;
+      border-bottom: 2px solid #2b208b;
+      padding-bottom: 10px;
+    }
+
+    .facility-section p {
+      line-height: 1.6;
+    }
+
+    .start-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2b208b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .start-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-menu {
+      background-color: #2b208b;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .facilities-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .faculty-books {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .faculty-books h2 {
+      color: #2b208b;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .faculty-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faculty-card-header {
+      padding: 15px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .faculty-card-content {
+      padding: 15px;
+    }
+
+    .faculty-card-content ul {
+      padding-left: 20px;
+    }
+
+    .faculty-card-content li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .view-all {
+      display: block;
+      text-align: right;
+      margin-top: 10px;
+      color: #2b208b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #eee;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .faculty-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Library</h1>
+    <p class="main-title">Independent University, Bangladesh (IUB)</p>
+  </header>
+
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Facilities</a>
+    <a href="#">Gallery</a>
+    <a href="#">Campus Job</a>
+  </div>
+
+  <div class="container">
+    <!-- My Library -->
+    <div class="box">
+      <div class="box-header blue">
+        <div>&#128101;</div>
+        <div>My Library</div>
+      </div>
+      <div class="box-content">
+        <a href="#">Get Library Membership</a>
+        <a href="#">Get Community Library Membership</a>
+        <a href="student login.html">Log in to Library Account</a>
+        <a href="index.html">Use Library from Home</a>
+        <a href="#">Get Library orientation (ppt)</a>
+        <a href="#">Get Help</a>
+      </div>
+    </div>
+
+    <!-- Library Hours -->
+    <div class="box">
+      <div class="box-header orange">
+        <div>&#128101;&#9200;</div>
+        <div>Library Hours (During Semester)</div>
+      </div>
+      <div class="box-content">
+        <div class="hours-block">Sun–Wed: 09:00 am to 09:00 pm</div>
+        <div class="hours-block">Thur: 09:00 am to 07:00 pm</div>
+        <div class="hours-block">Fri–Sat: 10:00 am to 06:00 pm</div>
+
+        <div class="box-header orange" style="font-size: 18px;">During Off Semester</div>
+        <div class="hours-block">Sun–Thu: 09:00 am to 07:00 pm</div>
+        <div class="hours-block">Fri–Sat: 10:00 am to 06:00 pm</div>
+        <div class="notice">
+          The library will remain closed on the holidays mentioned in the IUB calendar.
+        </div>
+      </div>
+    </div>
+
+    <!-- My Librarian -->
+    <div class="box">
+      <div class="box-header purple">
+        <div>&#127891;</div>
+        <div>My Librarian</div>
+      </div>
+      <div class="box-content">
+        <a href="#">Subject Librarian</a>
+        <a href="#">Use Learning Resources</a>
+        <a href="#">Book a discussion room</a>
+        <a href="#">Get the remote access</a>
+        <a href="#">Search an article</a>
+        <a href="#">Attend a workshop</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="facilities-container">
+    <!-- Digital Meeting Room -->
+    <div class="facility-section">
+      <h2>Digital Meeting Room</h2>
+      <p>IUB library has a digital meeting room with 20 seating capacity and smart equipment as well...</p>
+      <a href="#" class="start-link">Start here →</a>
+    </div>
+
+    <!-- Newspaper Facilities -->
+    <div class="facility-section">
+      <h2>Newspaper Facilities</h2>
+      <p>IUB library purchases thirteen (13) daily newspapers including bangla and english and kept...</p>
+      <a href="#" class="start-link">Start here →</a>
+    </div>
+
+    <!-- OPAC Terminal -->
+    <div class="facility-section">
+      <h2>Online Public Access Catalogue (OPAC) Terminal</h2>
+      <p>There is a dedicated computer of OPAC in the 2nd floor of the library.</p>
+      <a href="#" class="start-link">Start here →</a>
+    </div>
+  </div>
+
+  <!-- Faculty Booklists Section -->
+  <div class="faculty-books">
+    <h2>Faculty Booklists</h2>
+    <div class="faculty-grid">
+      <!-- CSE -->
+      <div class="faculty-card">
+        <div class="faculty-card-header" style="background-color: #2b208b;">
+          Computer Science & Engineering (CSE)
+        </div>
+        <div class="faculty-card-content">
+          <ul>
+            <li>Introduction to Algorithms - Cormen</li>
+            <li>Computer Organization and Design - Patterson</li>
+            <li>Database System Concepts - Silberschatz</li>
+            <li>Artificial Intelligence: A Modern Approach - Russell</li>
+            <li>Clean Code - Robert Martin</li>
+          </ul>
+          <a href="#" class="view-all">View all CSE books →</a>
+        </div>
+      </div>
+
+      <!-- EE -->
+      <div class="faculty-card">
+        <div class="faculty-card-header" style="background-color: #d84315;">
+          Electrical Engineering (EE)
+        </div>
+        <div class="faculty-card-content">
+          <ul>
+            <li>Fundamentals of Electric Circuits - Alexander</li>
+            <li>Microelectronic Circuits - Sedra/Smith</li>
+            <li>Power System Analysis - Grainger</li>
+            <li>Control Systems Engineering - Nagrath</li>
+            <li>Electromagnetic Field Theory - Sadiku</li>
+          </ul>
+          <a href="#" class="view-all">View all EE books →</a>
+        </div>
+      </div>
+
+      <!-- CE -->
+      <div class="faculty-card">
+        <div class="faculty-card-header" style="background-color: #00897b;">
+          Civil Engineering (CE)
+        </div>
+        <div class="faculty-card-content">
+          <ul>
+            <li>Structural Analysis - Hibbeler</li>
+            <li>Principles of Geotechnical Engineering - Das</li>
+            <li>Transportation Engineering - Wright</li>
+            <li>Environmental Engineering - Davis</li>
+            <li>Construction Project Management - Gould</li>
+          </ul>
+          <a href="#" class="view-all">View all CE books →</a>
+        </div>
+      </div>
+
+      <!-- BBA -->
+      <div class="faculty-card">
+        <div class="faculty-card-header" style="background-color: #ad1457;">
+          Business Administration (BBA)
+        </div>
+        <div class="faculty-card-content">
+          <ul>
+            <li>Principles of Marketing - Kotler</li>
+            <li>Organizational Behavior - Robbins</li>
+            <li>Financial Accounting - Weygandt</li>
+            <li>Business Research Methods - Cooper</li>
+            <li>Operations Management - Stevenson</li>
+          </ul>
+          <a href="#" class="view-all">View all BBA books →</a>
+        </div>
+      </div>
+
+      <!-- Finance -->
+      <div class="faculty-card">
+        <div class="faculty-card-header" style="background-color: #c62828;">
+          Finance
+        </div>
+        <div class="faculty-card-content">
+          <ul>
+            <li>Corporate Finance - Ross</li>
+            <li>Investments - Bodie</li>
+            <li>Financial Markets and Institutions - Mishkin</li>
+            <li>International Financial Management - Madura</li>
+            <li>Derivatives Markets - McDonald</li>
+          </ul>
+          <a href="#" class="view-all">View all Finance books →</a>
+        </div>
+      </div>
+
+      <!-- Environmental Science -->
+      <div class="faculty-card">
+        <div class="faculty-card-header" style="background-color: #2e7d32;">
+          Environmental Science (ES)
+        </div>
+        <div class="faculty-card-content">
+          <ul>
+            <li>Environmental Science: Earth as a Living Planet - Botkin</li>
+            <li>Introduction to Environmental Engineering - Davis</li>
+            <li>Environmental Chemistry - Manahan</li>
+            <li>Sustainable Energy - MacKay</li>
+            <li>Climate Change Science - Henderson</li>
+          </ul>
+          <a href="#" class="view-all">View all ES books →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Independent University, Bangladesh. All rights reserved.
+  </footer>
+
+</body>
+</html>

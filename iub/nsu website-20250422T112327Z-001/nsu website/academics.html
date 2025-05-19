@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academics | IUB</title>
+ <style>
+   /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header & Nav */
+header {
+  background-color: #1f2584;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+nav ul.navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+}
+
+nav ul li:hover > a {
+  background-color: #ed1c24;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  color: #1f2584;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Section Styles */
+.programs-section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #1f2584;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Program Cards */
+.program-card {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.program-card h3 {
+  color: #1f2584;
+  font-size: 1.1rem;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.badge.major {
+  background-color: #3d7300;
+}
+
+.badge.minor {
+  background-color: #006f9c;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">IUB</a>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#">Academics ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="academics.html">Undergraduate Programs</a></li>
+              <li><a href="#">Graduate Programs</a></li>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">Institutes & Centers</a></li>
+              <li><a href="#">Library</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Campus Life</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Academic Programs -->
+  <section class="programs-section">
+    <div class="container">
+      <h2 class="section-title">Undergraduate Business Programs</h2>
+
+      <div class="program-card">
+        <h3>BBA in Accounting 
+          <span class="badge major">Major</span> 
+          <span class="badge minor">Minor</span>
+        </h3>
+      </div>
+
+      <div class="program-card">
+        <h3>BBA in Finance 
+          <span class="badge major">Major</span> 
+          <span class="badge minor">Minor</span>
+        </h3>
+      </div>
+
+      <div class="program-card">
+        <h3>BBA in General Management 
+          <span class="badge major">Major</span> 
+          <span class="badge minor">Minor</span>
+        </h3>
+      </div>
+
+      <div class="program-card">
+        <h3>BBA in Human Resource Management (HRM) 
+          <span class="badge major">Major</span>
+        </h3>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

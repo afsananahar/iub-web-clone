@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IUB | EEE Program</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .program-header {
+      background: linear-gradient(rgba(44, 44, 146, 0.8), rgba(44, 44, 146, 0.8)), url('cse-banner.jpg');
+      background-size: cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .program-details {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .curriculum {
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .semester {
+      margin-bottom: 30px;
+    }
+
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .course {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .course-code {
+      color: #2c2c92;
+      font-weight: bold;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .faculty-card {
+      text-align: center;
+    }
+
+    .faculty-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2c2c92;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div id="navbar-placeholder"></div>
+
+  <div class="program-header">
+    <h1>Computer Science & Engineering</h1>
+    <p>Bachelor of Science | 143 Credits | 4 Years</p>
+  </div>
+
+  <div class="program-details">
+    <section>
+      <h2>Program Overview</h2>
+      <p>The B.Sc. in Computer Science and Engineering program provides comprehensive training in software development, algorithms, and system design. Students gain hands-on experience through labs, projects, and internships.</p>
+    </section>
+
+    <div class="curriculum">
+      <h2>Curriculum</h2>
+
+      <div class="semester">
+        <h3>First Year</h3>
+        <div class="course-list">
+          <div class="course">
+            <div class="course-code">CSE 101</div>
+            <h4>Introduction to Computer Science</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">MAT 101</div>
+            <h4>Calculus I</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">PHY 101</div>
+            <h4>Physics I</h4>
+            <p>3 Credits</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="semester">
+        <h3>Second Year</h3>
+        <div class="course-list">
+          <div class="course">
+            <div class="course-code">CSE 201</div>
+            <h4>Data Structures</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">CSE 202</div>
+            <h4>Discrete Mathematics</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">CSE 203</div>
+            <h4>Digital Logic Design</h4>
+            <p>3 Credits</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="semester">
+        <h3>Third Year</h3>
+        <div class="course-list">
+          <div class="course">
+            <div class="course-code">CSE 301</div>
+            <h4>Database Systems</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">CSE 302</div>
+            <h4>Operating Systems</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">CSE 303</div>
+            <h4>Computer Networks</h4>
+            <p>3 Credits</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="semester">
+        <h3>Fourth Year</h3>
+        <div class="course-list">
+          <div class="course">
+            <div class="course-code">CSE 401</div>
+            <h4>Machine Learning</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">CSE 402</div>
+            <h4>Software Engineering</h4>
+            <p>3 Credits</p>
+          </div>
+          <div class="course">
+            <div class="course-code">CSE 403</div>
+            <h4>Final Year Project</h4>
+            <p>6 Credits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="faculty">
+      <h2>Faculty Members</h2>
+      <div class="faculty-grid">
+        <div class="faculty-card">
+          <img src="cse.jpg" alt="mak" />
+          <h4>Dr. MA Khan</h4>
+          <p>Dean, School of Engineering</p>
+        </div>
+        <div class="faculty-card">
+          <img src="rahman.jpg" alt="rahman" />
+          <h4>Dr. S Rahman</h4>
+          <p>Professor, AI & ML</p>
+        </div>
+        <div class="faculty-card">
+          <img src="jahan.jpg" alt="jahan" />
+          <h4>Dr. T Jahan</h4>
+          <p>Associate Professor, Data Science</p>
+        </div>
+        <div class="faculty-card">
+          <img src="alam.jpg" alt="alam" />
+          <h4>Dr. M Alam</h4>
+          <p>Assistant Professor, Cybersecurity</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
